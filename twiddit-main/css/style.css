@@ -1,0 +1,348 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav{
+    position: relative;
+    background-color: #332b33;
+    width: 100%;
+    height: 100px;
+}
+
+footer{
+    position: fixed;
+    background-color: #332b33;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+}
+
+.links{
+    float: left;
+    height: 100px;
+}
+
+.inlinefix{
+    display: inline-block;
+    overflow: hidden;
+}
+
+.inlinefix button{
+    position: relative;
+    width: auto;
+    height: 50px;
+    border: 3px solid #fff;
+    background-color: #332b33;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 12px;
+    margin-bottom: 25px;
+}
+
+.inlinefix button:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.inlinefix button:hover:before{
+    visibility: visible;
+    transform: scaleX(0.9);
+}
+
+.rechts{
+    float: right;
+    height: 100px;
+}
+
+.logo{
+    display: inline-block;
+}
+
+.logo-titel{
+    display: inline-block;
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+    top: 0px;
+}
+
+#zoeken{
+    width: 250px;
+    height: 30px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-right: 12.5px;
+}
+
+.search_ico{
+    transition: all 0.5s;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 17.5px;
+}
+
+.search_ico:hover{
+    height: 42px;
+    width: 42px;
+}
+
+.login_ico{
+    height: 75px;
+    width: 75px;
+    margin-top: 12.5px;
+    margin-right: 12.5px;
+}
+
+.dropdown:hover .login_drpd{
+    display: block;
+    animation-name: drpd;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.dropdown:hover .acc_drpd{
+    display: block;
+    animation-name: drpd;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.dropdown:hover .obj1{
+    display: block;
+}
+
+.obj1{
+    display: none;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 0px;
+    right: 0px;
+}
+
+.acc_drpd{
+    display: none;
+    position: absolute;
+    text-align: center;
+    height: 100px;
+    width: 150px;
+    background-color: #332b33;
+    right: 0px;
+    top: 100px;
+}
+
+.acc_drpd button{
+    height: 50px;
+    width: 100%;
+    border: 2px solid #332b33;
+    background-color: forestgreen;
+    color: #fff;
+    transition: all 1s;
+}
+
+.acc_drpd button:hover{
+    background-color: greenyellow;
+}
+
+.login_drpd{
+    display: none;
+    position: absolute;
+    text-align: center;
+    height: 100px;
+    width: 150px;
+    background-color: #332b33;
+    top: 100px;
+    right: 0px;
+}
+
+.login_drpd button{
+    height: 50px;
+    width: 100%;
+    border: 2px solid #332b33;
+    color: #fff;
+}
+
+.login_btn{
+    background-color: limegreen;
+    transition: all 1s;
+}
+
+.register_btn{
+    background-color: orange;
+    transition: all 1s;
+}
+
+.login_btn:hover{
+    background-color:  #332b33;
+}
+
+.register_btn:hover{
+    background-color: #332b33;
+}
+
+.nieuweblog{
+    text-align: center;
+}
+
+#titel{
+    display: block;
+    height: 25px;
+    width: 800px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #332b33;
+    margin: auto;
+    padding: 5px;
+}
+
+#bloginhoud{
+    display: block;
+    height: 300px;
+    width: 900px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #332b33;
+    resize: none;
+    margin: auto;
+    padding: 5px;
+}
+
+#categorie{
+    height: 30px;
+    width: 175px;
+    color: #fff;
+    background-color: limegreen;
+    font-size: 16px;
+    border: 2px solid #332b33;
+    -moz-appearance: none;
+    -webkit-appearance: none; 
+    text-align: center;
+}
+
+#categorie option{
+    text-align: center;
+}
+
+.blogpost{
+    height: auto;
+    width: 900px;
+}
+
+
+#blogklaar{
+    height: 50px;
+    width: 200px;
+    color: #fff;
+    background-color: forestgreen;
+    font-size: 25px;
+    border: 2px solid #332b33;
+}
+
+.newblogs-space
+{
+    text-align: center;
+}
+
+.newblogs{
+    display: inline-block;
+    border: 3px solid #000;
+    font-size: 16px;
+    width: 400px;
+    margin: 30px;
+    animation: slide-in 1.5s;
+}
+@keyframes slide-in{
+    0%{
+        opacity: 0;
+        }
+        20%{
+            opacity: 0.2;
+        }
+        40%{
+            opacity: 0.4;
+        }
+        60%{
+            opacity: 0.6;
+        }
+        80%{
+            opacity: 0.8;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+.newblogs-img{
+    display: block;
+    border-bottom: 2px solid #000;
+    background-color: #fff;
+    height: 225px;
+    overflow: hidden;
+}
+
+.newblogs-titel{
+    display: block;
+    border-top: 1px solid #000;
+    background-color: #fff;
+    padding: 8px;
+}
+
+/*Animations*/
+
+@keyframes drpd{
+    0%{
+        right: -150px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+
+/*Media*/
+
+@media screen and (max-width: 800px){
+    *{
+        transform: scaleZ(3);       
+    }
+    .newblogs{
+        width: 200px;
+        margin-right: 180px;
+    }
+    #zoeken{
+        display: none;
+    }
+    .search_ico{
+        display: none;
+    }
+    .acc_drpd{
+        width: 100px;
+    }
+    .newblogs-space{
+        width: 300px;
+    }
+    #bloginhoud{
+        width: 300px;
+    }
+    #titel{
+        width: 250px;
+    }
+}
+
+
+/*profile new*/
+
+.username{
+    font-size: 30px;
+}
+
+
